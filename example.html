@@ -1,15 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <body>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="playerWrapper">
+
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <div id="player"></div>
+    <div class="spotlightVideo">
+      <div id="player"></div>
+      <div class="spotlightVideoDescription">
+        <span class="videoTitle">Video title</span>
+        <span class="videoDescription">This is a description of the current video.</span>
+      </div>
+    </div>
     <!-- selectAlternateVideo( '<YouTube video ID>' ) -->
-    <button type="button" onclick="selectAlternateVideo('V1h6uTyoVa8')">Video 1</button>
-    <button type="button" onclick="selectAlternateVideo('jAAJCxtOeyk')">Video 2</button>
+    <div class="playlistWrapper">
 
-    <script src="example.js">
-      <!-- https://developers.google.com/youtube/iframe_api_reference#Queueing_Functions -->
-    </script>
+      <div>
 
-  </body>
+      </div>
+
+      <div class="playlistItem" onclick="selectAlternateVideo('V1h6uTyoVa8')">
+
+        <div>
+          <img src="locicero_logo.png">
+        </div>
+
+        <div>
+
+          <div class="playlistItemTitle">
+            Video 1
+          </div>
+
+          <div class="playlistItemSubTitle">
+            Subtitle
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="playlistItem" onclick="selectAlternateVideo('jAAJCxtOeyk')">
+        <div>
+          <img src="locicero_logo.png">
+        </div>
+
+        <div>
+
+          <div class="playlistItemTitle">
+            Video 2
+          </div>
+
+          <div class="playlistItemSubTitle">
+            Subtitle
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="example.js">
+    <!-- https://developers.google.com/youtube/iframe_api_reference#Queueing_Functions -->
+  </script>
+
+</body>
+
 </html>
